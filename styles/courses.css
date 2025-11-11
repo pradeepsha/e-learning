@@ -51,6 +51,52 @@ body
 	background: #FFFFFF;
 	color: #a5a5a5;
 }
+
+
+		.main_nav li.dropdown {
+			position: relative;
+		}
+
+		.main_nav li .dropdown-menu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			/* position below Courses */
+			left: 0;
+			background-color: #fff;
+			min-width: 160px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			z-index: 9999;
+			/* ensures it appears above everything */
+			border-radius: 6px;
+			padding: 6px 0;
+		}
+
+		.main_nav li .dropdown-menu li a {
+			display: block;
+			padding: 6px 14px;
+			font-size: 13px;
+			color: #333;
+			text-decoration: none;
+			white-space: nowrap;
+			/* keeps "Web Development" on one line */
+		}
+
+		.main_nav li .dropdown-menu li a:hover {
+			background-color: #f0f0f0;
+		}
+
+		/* ✅ Show dropdown on hover */
+		.main_nav li.dropdown:hover>.dropdown-menu {
+			display: block;
+		}
+
+
+
+
+
+
+
 div
 {
 	display: block;
@@ -912,10 +958,26 @@ section
 	padding-right: 30px;
 	padding-bottom: 23px;
 }
-.course_title
+.subject_title 
 {
-
+	padding-bottom: 8px;
 }
+.subject_title a
+{
+	font-family: 'Roboto Slab', serif;
+	font-size: 13px;
+	color: #384158;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.subject_title a:hover
+{
+	color: #14bdee;
+}
+
 .course_title a
 {
 	font-family: 'Roboto Slab', serif;

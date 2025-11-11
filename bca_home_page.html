@@ -15,6 +15,30 @@
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 	<link rel="stylesheet" type="text/css" href="styles/courses.css">
 	<link rel="stylesheet" type="text/css" href="styles/courses_responsive.css">
+	<style>
+		/* Overlay text */
+		.upcoming-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			background: rgba(0, 0, 0, 0.5);
+			/* semi-transparent dark layer */
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 28px;
+			font-weight: bold;
+			text-transform: uppercase;
+			z-index: 10;
+
+			letter-spacing: 3px;
+			text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+			/* soft shadow */
+		}
+	</style>
 </head>
 
 <body>
@@ -62,31 +86,43 @@
 						<div class="col">
 							<div class="header_content d-flex flex-row align-items-center justify-content-start">
 								<div class="logo_container">
-									<a href="#">
-										<div class="logo_text">Unic<span>at</span></div>
+									<!-- <a href="#">
+										<div class="logo_text">SHARADA<span>IT</span></div>
+									</a> -->
+									<a class="navbar-brand" href="index.html">
+										<img src="images/rvs-11.png" alt="" style="width: 215px;">
 									</a>
 								</div>
 								<nav class="main_nav_contaner ml-auto">
 									<ul class="main_nav">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about.html">About</a></li>
-										<li class="active"><a href="courses.html">Courses</a></li>
-										<li><a href="blog.html">Blog</a></li>
-										<li><a href="#">Page</a></li>
+										<li class="active"><a href="#">Home</a></li>
+										<li><a href="bca_home_page.html">BCA</a></li>
+										<li class="dropdown">
+											<a href="">Courses </a>
+											<ul class="dropdown-menu">
+												<li><a href="courses.html">Mobile App Development</a></li>
+												<li><a href="web-development.html">Web Development</a></li>
+												<li><a href="database-management.html">Database Management</a></li>
+												<li><a href="database-management.html">UI-UX Design</a></li>
+											</ul>
+										</li>
+
+										<!-- <li><a href="blog.html">Blog</a></li>
+										<li><a href="#">Page</a></li> -->
 										<li><a href="contact.html">Contact</a></li>
+										<li><a href="about.html">About</a></li>
 									</ul>
-									<div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>
+									<!-- <div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div> -->
 
 									<!-- Hamburger -->
 
-									<div class="shopping_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-									</div>
-									<div class="hamburger menu_mm">
-										<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
-									</div>
-								</nav>
-
+									<!-- <div class="shopping_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
 							</div>
+							<div class="hamburger menu_mm">
+								<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+							</div>
+							</nav>
+
 						</div>
 					</div>
 				</div>
@@ -196,10 +232,14 @@
 										<div class="course_teacher">Mr. John Taylor</div>
 										<div class="course_teacher">Mr. John Taylor</div> -->
 											<div class="course_text">
-												<h5 style="padding-bottom: 8px;">1️⃣ IT Tools and Applications</h5>
-												<h5 style="padding-bottom: 8px;">2️⃣ Principles of Mathematics</h5>
-												<h5 style="padding-bottom: 8px;">3️⃣ Functional English</h5>
-												<h5 style="padding-bottom: 8px;">4️⃣ Computer Programming in C</h5>
+												<h5 class="subject_title"> <a href="iT_Tools_and_applications.html">1️⃣
+														IT Tools and Applications</a> </h5>
+												<h5 class="subject_title"><a href="course.html">2️⃣ Principles of
+														Mathematics </a> </h5>
+												<h5 class="subject_title"> <a href="course.html">3️⃣ Functional
+														English</a></h5>
+												<h5 class="subject_title"><a href="course.html">4️⃣ Computer Programming
+														in C </a></h5>
 											</div>
 										</div>
 										<div class="course_footer">
@@ -213,15 +253,16 @@
 													<i class="fa fa-star" aria-hidden="true"></i>
 													<span>5 Ratings</span>
 												</div>
-												<div class="course_price ml-auto">FREE</div>
+												<div class="course_price ml-auto"><span>$320</span>FREE</div>
 											</div>
 										</div>
 									</div>
 								</div>
 
 								<!-- Course -->
-								<div class="col-lg-6 course_col">
+								<div class="col-lg-6 course_col" style="pointer-events: none; opacity: 0.6; ">
 									<div class="course">
+										<div class="upcoming-overlay">Upcoming</div>
 										<div class="course_image"><img src="images/bca-2-semester.png" alt=""></div>
 										<div class="course_body">
 											<h3 class="course_title"><a href="course.html">Subjects</a></h3>
@@ -247,14 +288,14 @@
 													<i class="fa fa-star" aria-hidden="true"></i>
 													<span>5 Ratings</span>
 												</div>
-												<div class="course_price ml-auto">Free</div>
+												<div class="course_price ml-auto"><span>$320</span>FREE</div>
 											</div>
 										</div>
 									</div>
 								</div>
 
 								<!-- Course -->
-								<div class="col-lg-6 course_col">
+								<div class="col-lg-6 course_col" style="pointer-events: none; opacity: 0.6; ">
 									<div class="course">
 										<div class="course_image"><img src="images/bca-3.png" alt=""></div>
 										<div class="course_body">
@@ -288,7 +329,7 @@
 								</div>
 
 								<!-- Course -->
-								<div class="col-lg-6 course_col">
+								<div class="col-lg-6 course_col" style="pointer-events: none; opacity: 0.6; ">
 									<div class="course">
 										<div class="course_image"><img src="images/bca-4.png" alt=""></div>
 										<div class="course_body">
@@ -316,7 +357,72 @@
 													<i class="fa fa-star" aria-hidden="true"></i>
 													<span>5 Ratings</span>
 												</div>
-												<div class="course_price ml-auto">$130</div>
+												<div class="course_price ml-auto"><span>$320</span>FREE</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Course -->
+								<div class="col-lg-6 course_col" style="pointer-events: none; opacity: 0.6; ">
+									<div class="course">
+										<div class="course_image"><img src="images/bca-5.png" alt=""></div>
+										<div class="course_body">
+											<h3 class="course_title"><a href="course.html">Subjects</a></h3>
+											<!-- <div class="course_teacher">Mr. Charles</div> -->
+											<div class="course_text">
+												<h5 style="padding-bottom: 8px;">1️⃣ Internet and JAVA Programming</h5>
+												<h5 style="padding-bottom: 8px;">2️⃣ ORACLE and PL/SQL </h5>
+												<h5 style="padding-bottom: 8px;">3️⃣ Computer Networks
+												</h5>
+												<h5 style="padding-bottom: 8px;">4️⃣ Software Project Management
+												</h5>
+											</div>
+										</div>
+										<div class="course_footer">
+											<div
+												class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+												<!-- <div class="course_info">
+													<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+													<span>20 Student</span>
+												</div> -->
+												<div class="course_info">
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<span>5 Ratings</span>
+												</div>
+												<div class="course_price ml-auto"><span>$320</span>FREE</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Course 6 semester-->
+								<div class="col-lg-6 course_col" style="pointer-events: none; opacity: 0.6; ">
+									<div class="course">
+										<div class="course_image"><img src="images/bca-6.png" alt=""></div>
+										<div class="course_body">
+											<h3 class="course_title"><a href="course.html">Subjects</a>
+											</h3>
+											<!-- <div class="course_teacher">Mr. John Taylor</div> -->
+											<div class="course_text">
+												<h5 style="padding-bottom: 8px;">1️⃣ Networks and Network Security</h5>
+												<h5 style="padding-bottom: 8px;">2️⃣ Web Development </h5>
+												<h5 style="padding-bottom: 8px;">3️⃣ Project Work </h5>
+												<h5 style="padding-bottom: 8px;"> &nbsp;</h5>
+											</div>
+										</div>
+										<div class="course_footer">
+											<div
+												class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+												<!-- <div class="course_info">
+													<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+													<span>20 Student</span>
+												</div> -->
+												<div class="course_info">
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<span>5 Ratings</span>
+												</div>
+												<div class="course_price ml-auto"><span>$320</span>FREE</div>
 											</div>
 										</div>
 									</div>
@@ -359,7 +465,7 @@
 										<div class="latest_content">
 											<div class="latest_title"><a href="course.html">How to Design a Logo a
 													Beginners Course</a></div>
-											<div class="latest_price">Free</div>
+											<div class="latest_price"><span>$320</span>FREE</div>
 										</div>
 									</div>
 
@@ -383,13 +489,70 @@
 										<div class="latest_content">
 											<div class="latest_title"><a href="course.html">The Secrets of Body
 													Language</a></div>
-											<div class="latest_price">$220</div>
+											<div class="latest_price"><span>$320</span>FREE</div>
 										</div>
 									</div>
 
 								</div>
 							</div>
 
+							<!-- Gallery -->
+							<div class="sidebar_section">
+								<div class="sidebar_section_title">Instagram</div>
+								<div class="sidebar_gallery">
+									<ul
+										class="gallery_items d-flex flex-row align-items-start justify-content-between flex-wrap">
+										<li class="gallery_item">
+											<div
+												class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">
+												+</div>
+											<a class="colorbox" href="images/gallery_1_large.jpg">
+												<img src="images/gallery_1.jpg" alt="">
+											</a>
+										</li>
+										<li class="gallery_item">
+											<div
+												class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">
+												+</div>
+											<a class="colorbox" href="images/gallery_2_large.jpg">
+												<img src="images/gallery_2.jpg" alt="">
+											</a>
+										</li>
+										<li class="gallery_item">
+											<div
+												class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">
+												+</div>
+											<a class="colorbox" href="images/gallery_3_large.jpg">
+												<img src="images/gallery_3.jpg" alt="">
+											</a>
+										</li>
+										<li class="gallery_item">
+											<div
+												class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">
+												+</div>
+											<a class="colorbox" href="images/gallery_4_large.jpg">
+												<img src="images/gallery_4.jpg" alt="">
+											</a>
+										</li>
+										<li class="gallery_item">
+											<div
+												class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">
+												+</div>
+											<a class="colorbox" href="images/gallery_5_large.jpg">
+												<img src="images/gallery_5.jpg" alt="">
+											</a>
+										</li>
+										<li class="gallery_item">
+											<div
+												class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">
+												+</div>
+											<a class="colorbox" href="images/gallery_6_large.jpg">
+												<img src="images/gallery_6.jpg" alt="">
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 							<!-- Gallery -->
 							<div class="sidebar_section">
 								<div class="sidebar_section_title">Instagram</div>
@@ -505,11 +668,16 @@
 									<div class="footer_section footer_about">
 										<div class="footer_logo_container">
 											<a href="#">
-												<div class="footer_logo_text">Unic<span>at</span></div>
+												<div class="footer_logo_text">SHARADA-<span>IT</span></div>
 											</a>
 										</div>
 										<div class="footer_about_text">
-											<p>Lorem ipsum dolor sit ametium, consectetur adipiscing elit.</p>
+											<p>
+												Sharada-IT offers BCA, MCA, and BBA programs designed to launch your
+												career in technology and business ,
+												With hands-on training in MEAN & MERN Stack, AI, and AWS to make you
+												job-ready.
+											</p>
 										</div>
 										<div class="footer_social">
 											<ul>
@@ -534,9 +702,9 @@
 										<div class="footer_title">Contact Us</div>
 										<div class="footer_contact_info">
 											<ul>
-												<li>Email: Info.deercreative@gmail.com</li>
-												<li>Phone: +(88) 111 555 666</li>
-												<li>40 Baria Sreet 133/2 New York City, United States</li>
+												<li>Email: sharadait@gmail.com</li>
+												<li>Phone: +(91) 8181 050 321</li>
+												<li>40 Baria Sreet 133/2 Noida</li>
 											</ul>
 										</div>
 									</div>
@@ -550,11 +718,11 @@
 										<div class="footer_title">Contact Us</div>
 										<div class="footer_links_container">
 											<ul>
-												<li><a href="index.html">Home</a></li>
-												<li><a href="about.html">About</a></li>
-												<li><a href="contact.html">Contact</a></li>
+												<li><a href="#">Home</a></li>
+												<li><a href="#">About</a></li>
+												<li><a href="#">Contact</a></li>
 												<li><a href="#">Features</a></li>
-												<li><a href="courses.html">Courses</a></li>
+												<li><a href="#">Courses</a></li>
 												<li><a href="#">Events</a></li>
 												<li><a href="#">Gallery</a></li>
 												<li><a href="#">FAQs</a></li>
@@ -571,9 +739,11 @@
 										<div class="footer_title">Mobile</div>
 										<div class="footer_mobile_content">
 											<div class="footer_image"><a href="#"><img src="images/mobile_1.png"
-														alt=""></a></div>
+														alt=""></a>
+											</div>
 											<div class="footer_image"><a href="#"><img src="images/mobile_2.png"
-														alt=""></a></div>
+														alt=""></a>
+											</div>
 										</div>
 									</div>
 
@@ -590,9 +760,7 @@
 							<div class="cr_text">
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 								Copyright &copy;
-								<script>document.write(new Date().getFullYear());</script> All rights reserved | This
-								template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-									href="https://colorlib.com" target="_blank">Colorlib</a>
+								<script>document.write(new Date().getFullYear());</script> All rights reserved
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</div>
 							<div class="ml-lg-auto cr_links">
